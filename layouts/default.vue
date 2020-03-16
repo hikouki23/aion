@@ -1,9 +1,18 @@
 <template>
   <div>
+    <nav-bar />
     <nuxt />
   </div>
 </template>
 
+<script>
+import navBar from '~/components/NavBar.vue'
+export default {
+  components: {
+    navBar
+  }
+}
+</script>
 <style>
 html {
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
