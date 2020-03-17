@@ -1,0 +1,27 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "modelNumber": "gm6900",
+      "manufacturer": "casio",
+	  "type": "watch"
+    },
+	{
+      "id": 2,
+      "modelNumber": "forerunner235",
+      "manufacturer": "garmin",
+	  "type": "watch",
+	  "description": "Reloj para correr"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
