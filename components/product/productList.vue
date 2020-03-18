@@ -1,11 +1,11 @@
 <template>
   <div>
     <span v-if="$fetchState.pending">Loading products...</span>
-    <ul v-else>
-      <li v-for="(product) in products" :key="product.id">
+    <v-row dense>
+      <v-col v-for="(product) in products" :key="product.id" :cols="6">
         <product v-bind="product" />
-      </li>
-    </ul>
+      </v-col>
+    </v-row>
   </div>
 </template>
 

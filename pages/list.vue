@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Products</h1>
+    <h1>Productos</h1>
     <product-list />
     <button @click="$store.dispatch('product/getProducts')">
       Refresh products

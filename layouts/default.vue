@@ -48,8 +48,11 @@
       >
         <v-icon>mdi-minus</v-icon>
       </v-btn>
-      <v-toolbar-title v-text="title" />
       <v-spacer />
+      <v-toolbar-title class="indigo--text" v-text="title" />
+      <v-toolbar-title>
+        CRM
+      </v-toolbar-title>
       <v-btn
         icon
         @click.stop="rightDrawer = !rightDrawer"
@@ -75,7 +78,7 @@
               mdi-repeat
             </v-icon>
           </v-list-item-action>
-          <v-list-item-title>Switch drawer (click me)</v-list-item-title>
+          <v-list-item-title>Switch drawer</v-list-item-title>
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
@@ -83,7 +86,7 @@
       :fixed="fixed"
       app
     >
-      <span>&copy; {{ new Date().getFullYear() }}</span>
+      <span>Hikouki & 08 Inc. &copy; {{ new Date().getFullYear() }}</span>
     </v-footer>
   </v-app>
 </template>
@@ -92,8 +95,8 @@
 export default {
   data () {
     return {
-      clipped: false,
-      drawer: false,
+      clipped: true,
+      drawer: true,
       fixed: false,
       items: [
         {
@@ -102,15 +105,15 @@ export default {
           to: '/'
         },
         {
-          icon: 'mdi-chart-bubble',
-          title: 'Inspire',
-          to: '/inspire'
+          icon: 'mdi-cart-arrow-down',
+          title: 'Productos',
+          to: '/List'
         }
       ],
       miniVariant: false,
       right: true,
       rightDrawer: false,
-      title: 'Vuetify.js'
+      title: 'Aion'
     }
   }
 }
