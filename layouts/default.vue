@@ -86,7 +86,7 @@
       :fixed="fixed"
       app
     >
-      <span>Hikouki & 08 Inc. &copy; {{ new Date().getFullYear() }}</span>
+      <span>Hikouki Inc. &copy; {{ new Date().getFullYear() }}</span>
     </v-footer>
   </v-app>
 </template>

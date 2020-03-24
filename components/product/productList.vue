@@ -2,7 +2,13 @@
   <div>
     <span v-if="$fetchState.pending">Loading products...</span>
     <v-row dense>
-      <v-col v-for="(product) in products" :key="product.id" :cols="6">
+      <v-col
+        v-for="(product) in products"
+        :key="product.id"
+        cols="12"
+        sm="6"
+        lg="2"
+      >
         <product v-bind="product" />
       </v-col>
     </v-row>
