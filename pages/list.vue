@@ -1,31 +1,22 @@
 <template>
   <div>
-    <product-group v-for="category in categories" :key="category.id" :category="category" />
+    <product-group v-for="category in allCategories" :key="category.id" :category="category" />
   </div>
 </template>
 
 <script>
 /* eslint-disable nuxt/no-this-in-fetch-data */
-import { mapGetters } from 'vuex'
 import productGroup from '~/components/product/productGroup.vue'
+import allCategories from '~/queries/allCategories.gql'
+
 export default {
-  components: {
-    productGroup
-  },
-  async fetch () {
-    try {
-      await this.$store.dispatch('product/getProducts')
-    } catch (e) {
-      this.error({
-        statusCode: 503,
-        message: e.message
-      })
+  apollo: {
+    allCategories: {
+      query: allCategories
     }
   },
-  computed: {
-    ...mapGetters({
-      categories: 'product/categories'
-    })
+  components: {
+    productGroup
   }
 }
 </script>
