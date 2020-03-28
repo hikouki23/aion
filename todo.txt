@@ -1,0 +1,5 @@
+- api file to obtain base path and make requests 
+- logo
+- app rename
+- crm/delivery modes
+- product kind carousel < >
