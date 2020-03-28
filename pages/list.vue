@@ -1,16 +1,16 @@
 <template>
   <div>
-    <h1>Productos</h1>
-    <product-list />
+    <product-group v-for="category in categories" :key="category.id" :category="category" />
   </div>
 </template>
 
 <script>
 /* eslint-disable nuxt/no-this-in-fetch-data */
-import productList from '~/components/product/productList.vue'
+import { mapGetters } from 'vuex'
+import productGroup from '~/components/product/productGroup.vue'
 export default {
   components: {
-    productList
+    productGroup
   },
   async fetch () {
     try {
@@ -21,6 +21,11 @@ export default {
         message: e.message
       })
     }
+  },
+  computed: {
+    ...mapGetters({
+      categories: 'product/categories'
+    })
   }
 }
 </script>

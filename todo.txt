@@ -1,5 +1,11 @@
 - api file to obtain base path and make requests 
+- add categories
 - logo
+- expansion panels for products
+- cart list in nav drawer
+- checkout
+- QR
+- status page
 - app rename
 - crm/delivery modes
 - product kind carousel < >
@@ -7,3 +13,4 @@
 - add cart button 
 - authentication
 - redirect to login when user not logged and clicked add cart
+- replicate stock db to the cloud
