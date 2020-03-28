@@ -3,3 +3,7 @@
 - app rename
 - crm/delivery modes
 - product kind carousel < >
+- filters
+- add cart button 
+- authentication
+- redirect to login when user not logged and clicked add cart
