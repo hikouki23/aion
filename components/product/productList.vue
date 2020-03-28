@@ -1,6 +1,6 @@
 <template>
   <div>
-    <span v-if="$fetchState.pending">Loading products...</span>
+    <span v-if="loading">Loading products...</span>
     <v-row dense>
       <v-col
         v-for="(product) in products"
@@ -16,7 +16,6 @@
 </template>
 
 <script>
-/* eslint-disable nuxt/no-this-in-fetch-data */
 import { mapGetters } from 'vuex'
 import product from './product.vue'
 
@@ -24,19 +23,10 @@ export default {
   components: {
     product
   },
-  async fetch () {
-    try {
-      await this.$store.dispatch('product/getProducts')
-    } catch (e) {
-      this.error({
-        statusCode: 503,
-        message: e.message
-      })
-    }
-  },
   computed: {
     ...mapGetters({
-      products: 'product/products'
+      products: 'product/products',
+      loading: 'loading'
     })
   }
 }

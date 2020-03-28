@@ -12,10 +12,10 @@ export const mutations = {
 }
 
 export const actions = {
-  getProducts ({ commit }) {
-    this.$axios.$get('http://localhost:3000/products').then((response) => {
-      commit('updateProducts', response)
-    }).catch(err => console.log(err))
+  async getProducts ({ commit }) {
+    const products = await this.$axios.$get('http://localhost:3000/products')
+    commit('updateProducts', products)
+    commit('completeLoading', null, { root: true })
   }
 }
 
