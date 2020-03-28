@@ -1,20 +1,22 @@
 <template>
   <v-card class="mx-auto" max-width="20rem">
-    <v-img
-      :src="imgLink"
-      max-height="130"
-      contain
-      :aspect-ratio="aspect"
-    />
     <v-list-item three-line>
       <v-list-item-content>
-        <div class="overline mb-4">
-          {{ company }}
+        <div class="headline font-weight-thin mb-4">
+          {{ description }}
         </div>
+        <v-img
+          :src="imgLink"
+          max-height="130"
+          contain
+          :aspect-ratio="aspect"
+        />
         <v-list-item-title class="headline mb-1">
           ${{ price }}
         </v-list-item-title>
-        <v-list-item-subtitle>{{ description }}</v-list-item-subtitle>
+        <v-list-item-subtitle>
+          {{ company }}
+        </v-list-item-subtitle>
       </v-list-item-content>
     </v-list-item>
     <v-card-actions>
