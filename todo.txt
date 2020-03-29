@@ -1,11 +1,13 @@
 - api file to obtain base path and make requests 
 - add categories
 - logo
+- tests
+- caching
 - ws graphql subscriptions
 - expansion panels for products
 - cart list in nav drawer
 - checkout
-- QR
+- QR printout for orders
 - status page
 - app rename
 - crm/delivery modes
@@ -19,3 +21,4 @@
 - redirect to login when user not logged and clicked add cart
 - replicate stock db to the cloud
 - product api
+- scroll to top floating button
