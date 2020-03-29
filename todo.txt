@@ -1,6 +1,7 @@
 - api file to obtain base path and make requests 
 - add categories
 - logo
+- ws graphql subscriptions
 - expansion panels for products
 - cart list in nav drawer
 - checkout
@@ -10,7 +11,11 @@
 - crm/delivery modes
 - product kind carousel < >
 - filters
+- scroll pagination
+- ddos measures
+- docker and cloud scripting
 - add cart button 
 - authentication
 - redirect to login when user not logged and clicked add cart
 - replicate stock db to the cloud
+- product api

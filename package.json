@@ -5,7 +5,7 @@
   "author": "Hikouki",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
+    "dev": "nuxt --port 3001",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
@@ -13,6 +13,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "@nuxtjs/apollo": "^4.0.0-rc19",
     "@nuxtjs/axios": "^5.3.6",
     "nuxt": "^2.12.0"
   },
