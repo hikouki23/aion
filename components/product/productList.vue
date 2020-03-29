@@ -11,7 +11,7 @@
         sm="6"
         lg="2"
       >
-        <product-detail v-bind="product" />
+        <product-detail v-bind="product" show-options />
       </v-col>
     </v-row>
   </div>

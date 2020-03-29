@@ -1,6 +1,7 @@
 <template>
   <v-app dark>
     <nav-bar />
+    <shopping-list />
     <v-content>
       <v-container fluid>
         <nuxt />
@@ -13,11 +14,13 @@
 <script>
 import pageFooter from '~/components/generic/footer.vue'
 import navBar from '~/components/generic/navBar.vue'
+import shoppingList from '~/components/product/shoppingList.vue'
 
 export default {
   components: {
     pageFooter,
-    navBar
+    navBar,
+    shoppingList
   }
 }
 </script>

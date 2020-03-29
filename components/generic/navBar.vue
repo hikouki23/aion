@@ -1,6 +1,6 @@
 <template>
   <div>
-    <drawer :mini-variant="miniVariant" />
+    <drawer :mini-variant="miniVariant" :items="items" image="/lagenologo.png" title="Menu" />
     <v-app-bar
       :clipped-left="false"
       fixed
@@ -15,7 +15,7 @@
       <v-spacer />
       <v-toolbar-title class="indigo--text" v-text="title" />
       <v-toolbar-title>
-        CRM
+        Compras
       </v-toolbar-title>
     </v-app-bar>
   </div>
@@ -28,8 +28,25 @@ export default {
   data () {
     return {
       clipped: false,
-      miniVariant: false,
-      title: 'Aion'
+      miniVariant: true,
+      title: 'Aion',
+      items: [
+        {
+          icon: 'mdi-apps',
+          title: 'Home',
+          to: '/'
+        },
+        {
+          icon: 'mdi-cart-arrow-down',
+          title: 'Productos',
+          to: '/List'
+        },
+        {
+          icon: 'mdi-account',
+          title: 'Tus datos',
+          to: '/Profile'
+        }
+      ]
     }
   }
 }

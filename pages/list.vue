@@ -12,7 +12,10 @@ import allCategories from '~/queries/allCategories.gql'
 export default {
   apollo: {
     allCategories: {
-      query: allCategories
+      query: allCategories,
+      error (err) {
+        this.$router.push({ path: 'error', query: { error: err.message, code: err.networkError.statusCode } })
+      }
     }
   },
   components: {

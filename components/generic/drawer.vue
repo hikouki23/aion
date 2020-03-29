@@ -4,8 +4,24 @@
     :mini-variant="miniVariant"
     fixed
     app
+    :right="right"
+    :expand-on-hover="expandOnHover"
   >
     <v-list>
+      <v-list-item two-line :class="miniVariant && 'pl-3'">
+        <v-icon v-if="icon">
+          {{ icon }}
+        </v-icon>
+        <v-list-item-avatar v-else>
+          <img :src="image">
+        </v-list-item-avatar>
+
+        <v-list-item-content>
+          <v-list-item-title>{{ title }}</v-list-item-title>
+          <v-list-item-subtitle>{{ subtitle }}</v-list-item-subtitle>
+        </v-list-item-content>
+      </v-list-item>
+      <v-divider />
       <v-list-item
         v-for="(item, i) in items"
         :key="i"
@@ -21,34 +37,25 @@
         </v-list-item-content>
       </v-list-item>
     </v-list>
+    <slot />
   </v-navigation-drawer>
 </template>
 
 <script>
 export default {
   props: {
-    miniVariant: { type: Boolean, default: false }
+    miniVariant: { type: Boolean, default: false },
+    right: { type: Boolean, default: false },
+    expandOnHover: { type: Boolean, default: false },
+    items: { type: Array, default () { return [] } },
+    title: { type: String, default: '' },
+    subtitle: { type: String, default: '' },
+    image: { type: String, default: '' },
+    icon: { type: String, default: '' }
   },
   data () {
     return {
-      drawer: true,
-      items: [
-        {
-          icon: 'mdi-apps',
-          title: 'Home',
-          to: '/'
-        },
-        {
-          icon: 'mdi-cart-arrow-down',
-          title: 'Productos',
-          to: '/List'
-        },
-        {
-          icon: 'mdi-account',
-          title: 'Tus datos',
-          to: '/Profile'
-        }
-      ]
+      drawer: true
     }
   }
 }
