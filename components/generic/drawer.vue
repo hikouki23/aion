@@ -38,6 +38,10 @@
       </v-list-item>
     </v-list>
     <slot />
+    <template v-slot:append>
+      <v-divider class="mb-2" />
+      <slot name="bottom" />
+    </template>
   </v-navigation-drawer>
 </template>
 

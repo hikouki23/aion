@@ -5,7 +5,7 @@
     </div>
     <v-row dense>
       <v-col
-        v-for="(product) in allProducts"
+        v-for="product in allProducts"
         :key="product.id"
         cols="12"
         sm="6"
@@ -26,24 +26,37 @@ export default {
     productDetail
   },
   props: {
-    category: { type: Object, default () { return { id: 1 } } },
-    products: { type: Array, default () { return [] } }
+    category: {
+      type: Object,
+      default () {
+        return { id: 1 }
+      }
+    },
+    products: {
+      type: Array,
+      default () {
+        return []
+      }
+    }
   },
   apollo: {
     allProducts: {
-      query: gql`query allProducts($category: Int!) {
-      allProducts(filter: {
-        category: $category
-      }){
-        id
-        company
-        description
-        imgLink
-        pricePerUnity
-      },
-    }`,
+      query: gql`
+        query allProducts($category: Int!) {
+          allProducts(filter: { category: $category }) {
+            id
+            company
+            description
+            imgLink
+            pricePerUnity
+          }
+        }
+      `,
       error (err) {
-        this.$router.push({ path: 'error', query: { error: err.message, code: err.networkError.statusCode } })
+        this.$router.push({
+          path: 'error',
+          query: { error: err.message, code: err.networkError.statusCode }
+        })
       },
       variables () {
         return { category: this.category.id }
@@ -54,5 +67,4 @@ export default {
 </script>
 
 <style>
-
 </style>

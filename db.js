@@ -81,11 +81,11 @@ module.exports = {
     },
 	{
       id: 2,
-      name: "Golosinas"   
+      name: "Bebidas"   
     },
 	{
       id: 3,
-      name: "Bebidas"  
+      name: "Golosinas"  
     }
   ],
   profiles: [{

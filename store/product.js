@@ -4,22 +4,17 @@ export const state = () => ({
 })
 
 export const mutations = {
-  addProductToCart (state, productId) {
-    state.productsInCart.push(productId)
-  },
-  updateProducts (state, products) {
-    state.products = products
+  addProductToCart (state, product) {
+    state.productsInCart.push(product)
   },
   updateCategories (state, categories) {
     state.categories = categories
   }
 }
 
-export const actions = {
-
-}
+export const actions = {}
 
 export const getters = {
-  products: state => state.products,
+  productsInCart: state => state.productsInCart,
   categories: state => state.categories
 }

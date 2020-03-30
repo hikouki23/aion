@@ -12,7 +12,7 @@
               ${{ price }}
             </v-col>
             <v-col cols="8">
-              <quantity-picker @update-quantity="updateQuantity" />
+              <quantity-picker :quantity-picked="quantityPicked" @update-quantity="updateQuantity" />
             </v-col>
           </v-row>
         </v-list-item-title>
@@ -42,6 +42,7 @@ export default {
     quantityPicker
   },
   props: {
+    id: { type: String, default: '1' },
     productCode: { type: String, default: 'Missing model number' },
     description: { type: String, default: 'Missing description' },
     imgLink: {
@@ -52,7 +53,8 @@ export default {
     company: { type: String, default: 'Missing company' },
     aspect: { type: String, default: '1' },
     pricePerUnity: { type: Number, default: 99999 },
-    showCartButton: { type: Boolean, default: false }
+    showCartButton: { type: Boolean, default: false },
+    quantityPicked: { type: Number, default: 1 }
   },
   data () {
     return {
@@ -64,12 +66,15 @@ export default {
       return this.pricePerUnity * this.quantity
     }
   },
+  mounted () {
+    if (this.quantityPicked > 1) { this.quantity = this.quantityPicked }
+  },
   methods: {
     updateQuantity (val) {
       this.quantity = val
     },
     addProductToCart () {
-      this.$store.commit('product/addProductToCart', this.id)
+      this.$store.commit('product/addProductToCart', { id: this.id, quantityPicked: this.quantity, description: this.description, company: this.company, pricePerUnity: this.pricePerUnity, imgLink: this.imgLink })
     }
   }
 }

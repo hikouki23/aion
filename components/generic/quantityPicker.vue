@@ -19,13 +19,17 @@
 
 <script>
 export default {
-  data () {
-    return { quantity: 1 }
+  props: {
+    quantityPicked: { type: Number, default: 1 }
   },
+  data () { return { quantity: 1 } },
   computed: {
     quantityText () {
       return this.quantity.toString()
     }
+  },
+  mounted () {
+    this.quantity = this.quantityPicked
   },
   methods: {
     updateQuantity (delta) {
