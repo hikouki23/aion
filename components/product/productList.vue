@@ -11,7 +11,7 @@
         sm="6"
         lg="2"
       >
-        <product-detail v-bind="product" show-options />
+        <product-detail v-bind="product" show-cart-button />
       </v-col>
     </v-row>
   </div>
@@ -26,7 +26,8 @@ export default {
     productDetail
   },
   props: {
-    category: { type: Object, default () { return { id: 1 } } }
+    category: { type: Object, default () { return { id: 1 } } },
+    products: { type: Array, default () { return [] } }
   },
   apollo: {
     allProducts: {
@@ -38,7 +39,7 @@ export default {
         company
         description
         imgLink
-        price
+        pricePerUnity
       },
     }`,
       error (err) {
