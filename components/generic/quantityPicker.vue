@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-text-field class="py-0" label="Cantidad" :placeholder="quantityText">
+    <v-text-field v-model="quantity" :rules="[validationRules.min]" class="py-0" label="Cantidad" @input="$emit('update-quantity', quantity)">
       <template v-slot:append-outer>
         <v-btn icon color="secondary" @click="quantity > 1 ? updateQuantity(-1) : 0">
           <v-icon small>
@@ -22,7 +22,14 @@ export default {
   props: {
     quantityPicked: { type: Number, default: 1 }
   },
-  data () { return { quantity: 1 } },
+  data () {
+    return {
+      quantity: 1,
+      validationRules: {
+        min: value => value > 0 ? '' : 'Elegi al menos 1'
+      }
+    }
+  },
   computed: {
     quantityText () {
       return this.quantity.toString()

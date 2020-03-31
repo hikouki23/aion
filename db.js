@@ -7,7 +7,7 @@ module.exports = {
 	  category: 1,
 	  description: "Turron de mani",
 	  imgLink: "https://www.arcor.com/ar/uploads/product_images/c96d53118d616944df4c238d2f9c6f85.jpg",
-	  pricePerUnity: 30
+	  pricePerUnity: 15
     },
 	{
       id: 2,
@@ -24,7 +24,7 @@ module.exports = {
       productCode: "topln433",
       company: "Arcor",
 	  category: 3,
-	   description: "Chicle topline",
+	   description: "Topline menta",
 	   imgLink: "https://www.arcor.com/ar/uploads/product_images/menta.jpg",
 	   pricePerUnity: 24
    },
@@ -33,46 +33,91 @@ module.exports = {
       productCode: "topln433",
       company: "Arcor",
 	  category: 3,
-	   description: "Chicle topline",
-	   imgLink: "https://www.arcor.com/ar/uploads/product_images/menta.jpg",
+	   description: "Topline fruta",
+	   imgLink: "https://ardiaqa.vteximg.com.br/arquivos/ids/222944-1000-1000/Chicle-Topline-Fruta-67-Gr-_1.jpg?v=637194305971570000",
 	   pricePerUnity: 24
    },
-   	{
+   {
       id: 5,
-      productCode: "topln433",
-      company: "Arcor",
-	  category: 3,
-	   description: "Chicle topline",
-	   imgLink: "https://www.arcor.com/ar/uploads/product_images/menta.jpg",
-	   pricePerUnity: 24
+      productCode: "gay421",
+      company: "Gallo",
+	  category: 1,
+	   description: "Arroz doble carolina",
+	   imgLink: "https://recetasgallo.com.ar/wp-content/uploads/2017/03/Pack_DC-1.png",
+	   pricePerUnity: 87
    },
-   	{
+   {
       id: 6,
-      productCode: "topln433",
+      productCode: "gay421",
       company: "Arcor",
-	  category: 3,
-	   description: "Chicle topline",
-	   imgLink: "https://www.arcor.com/ar/uploads/product_images/menta.jpg",
-	   pricePerUnity: 24
+	  category: 1,
+	   description: "Polenta presto pronta",
+	   imgLink: "https://jumboargentina.vteximg.com.br/arquivos/ids/204751-750-750/Harina-Presto-Pronta-De-Maiz-Harina-De-MaIz-Presto-Pronta-500-Gr-1-41146.jpg?v=636383672342000000",
+	   pricePerUnity: 87
    },
-   	{
+    {
       id: 7,
-      productCode: "topln433",
-      company: "Arcor",
-	  category: 3,
-	   description: "Chicle topline",
-	   imgLink: "https://www.arcor.com/ar/uploads/product_images/menta.jpg",
-	   pricePerUnity: 24
+      productCode: "pep412",
+      company: "Pepsi",
+	  category: 2,
+	   description: "Pepsi 2.25 litros",
+	   imgLink: "https://http2.mlstatic.com/gaseosa-pepsi-225-lts-D_NQ_NP_674983-MLA31025353374_062019-Q.jpg",
+	   pricePerUnity: 90
    },
    	{
       id: 8,
       productCode: "topln433",
       company: "Arcor",
 	  category: 3,
-	   description: "Chicle topline",
-	   imgLink: "https://www.arcor.com/ar/uploads/product_images/menta.jpg",
+	   description: "Topline seven violet",
+	   imgLink: "https://www.arcor.com/ar/uploads/product_images/SEVEN-VIOLET-%20CHERRY.jpg",
 	   pricePerUnity: 24
-   }
+   },
+   {
+      id: 9,
+      productCode: "tofin125",
+      company: "Arcor",
+	  category: 3,
+	   description: "Chocolate tofi negro",
+	   imgLink: "https://d26lpennugtm8s.cloudfront.net/stores/323/592/products/img_93061-01c330b09d9fcf816d14931466325726-1024-1024.jpg",
+	   pricePerUnity: 43
+   },
+   {
+      id: 10,
+      productCode: "tofin124",
+      company: "Arcor",
+	  category: 3,
+	   description: "Chocolate tofi blanco",
+	   imgLink: "https://d26lpennugtm8s.cloudfront.net/stores/323/592/products/img_93081-6c0b05906e5b41e30314931465943067-1024-1024.jpg",
+	   pricePerUnity: 47
+   },
+   {
+      id: 11,
+      productCode: "sierr821",
+      company: "Sierra de los Padres",
+	  category: 2,
+	   description: "Agua mineral 6 litros",
+	   imgLink: "https://lh3.googleusercontent.com/proxy/VhJn6HZSwAP_iYjG7DTU8E215BSljnY3XVkS15gn_dxEu522oBXCWo_1kdgGS3xbjRfcwD0cm5Y2kxuAzfS9-2x9xV5KevIVZEfICu2bfM1umWnOwKRc6m9O-1y9b_XLwdDYSwxbvW8",
+	   pricePerUnity: 150
+   },   
+   {
+      id: 12,
+      productCode: "donv412",
+      company: "Don Vicente",
+	  category: 1,
+	   description: "Fideos Caserito",
+	   imgLink: "https://http2.mlstatic.com/fideos-don-vicente-caserito-500gr-por-unidad-D_NQ_NP_815179-MLA31063332194_062019-Q.jpg",
+	   pricePerUnity: 74
+   },
+   {
+      id: 13,
+      productCode: "cz314",
+      company: "Catena Zapata",
+	  category: 1,
+	   description: "Nicasia Red Blend",
+	   imgLink: "https://http2.mlstatic.com/vino-nicasia-red-blend-malbec-750-ml-D_NQ_NP_756630-MLA27803665629_072018-O.webp",
+	   pricePerUnity: 499
+   }     
   ],
   categories: [
     {

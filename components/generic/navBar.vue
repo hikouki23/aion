@@ -29,7 +29,7 @@ export default {
     return {
       clipped: false,
       miniVariant: true,
-      title: 'Aion',
+      title: 'LaGeno',
       items: [
         {
           icon: 'mdi-apps',
@@ -45,6 +45,11 @@ export default {
           icon: 'mdi-account',
           title: 'Tus datos',
           to: '/Profile'
+        },
+        {
+          icon: 'mdi-barcode',
+          title: 'Tus pedidos',
+          to: '/Orders'
         }
       ]
     }
