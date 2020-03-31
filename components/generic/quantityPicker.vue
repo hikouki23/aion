@@ -26,7 +26,7 @@ export default {
     return {
       quantity: 1,
       validationRules: {
-        min: value => value > 0 ? '' : 'Elegi al menos 1'
+        min: value => value > 0 ? true : 'Elegi al menos 1'
       }
     }
   },
@@ -40,7 +40,7 @@ export default {
   },
   methods: {
     updateQuantity (delta) {
-      this.quantity += delta
+      this.quantity = parseInt(this.quantity) + delta
 
       this.$emit('update-quantity', this.quantity)
     }

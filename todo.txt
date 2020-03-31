@@ -1,4 +1,3 @@
-- qtity picker bug fix
 - add to cart validation (qty 0)
 - api file to obtain base path and make requests 
 - add categories
