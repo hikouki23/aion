@@ -1,20 +1,20 @@
 <template>
-  <v-card class="mx-auto" max-width="20rem">
+  <v-card class="mx-auto" max-width="20rem" max-height="20rem">
     <v-icon v-if="!showCartButton" class="clickable float-right" @click="removeProductFromCart">
       mdi-close
     </v-icon>
     <v-list-item three-line>
-      <v-list-item-content>
+      <v-list-item-content class="pb-0">
         <div class="headline font-weight-thin mb-4">
           {{ description }}
         </div>
         <v-img :src="imgLink" max-height="130" contain :aspect-ratio="aspect" />
         <v-list-item-title class="headline mb-1">
-          <v-row>
+          <v-row no-gutters>
             <v-col>
               ${{ price }}
             </v-col>
-            <v-col cols="8">
+            <v-col cols="8" class="pt-2">
               <quantity-picker :quantity-picked="quantityPicked" @update-quantity="updateQuantity" />
             </v-col>
           </v-row>
@@ -25,7 +25,7 @@
       </v-list-item-content>
     </v-list-item>
     <v-card-actions>
-      <v-row justify="center">
+      <v-row justify="center" no-gutters>
         <v-col v-if="showCartButton" cols="4">
           <v-btn class="ml-2" fab dark color="blue" @click="addProductToCart">
             <v-icon dark>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-text-field label="Cantidad" :placeholder="quantityText">
+    <v-text-field class="py-0" label="Cantidad" :placeholder="quantityText">
       <template v-slot:append-outer>
         <v-btn icon color="secondary" @click="quantity > 1 ? updateQuantity(-1) : 0">
           <v-icon small>

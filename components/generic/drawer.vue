@@ -40,7 +40,7 @@
     <slot />
     <template v-slot:append>
       <v-divider class="mb-2" />
-      <slot v-if="!mini-variant" name="bottom" />
+      <slot name="bottom" />
     </template>
   </v-navigation-drawer>
 </template>

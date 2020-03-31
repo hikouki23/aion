@@ -5,12 +5,24 @@
     title="Carrito"
     icon="mdi-cart-outline"
     :subtitle="`${pickedQuantity} productos`"
+    class="d-xs-none"
   >
     <product-detail v-for="product in sortedProducts" :key="product.id" v-bind="product" @on-remove-product="removeProduct" @on-quantity-change="updateProduct" />
     <template v-slot:bottom>
-      <h3 class="headline pb-2">
-        Total: ${{ totalPrice }}
-      </h3>
+      <v-row justify="center">
+        <v-col cols="6">
+          <h3 class="headline ml-2 pb-2">
+            Total: ${{ totalPrice }}
+          </h3>
+        </v-col>
+      </v-row>
+      <v-row justify="center">
+        <v-col cols="6">
+          <v-btn outlined class="ml-2 mb-4">
+            Confirmar
+          </v-btn>
+        </v-col>
+      </v-row>
     </template>
   </drawer>
 </template>
@@ -24,6 +36,9 @@ export default {
   components: {
     drawer,
     productDetail
+  },
+  data () {
+    return { hover: false }
   },
   computed: {
     ...mapGetters({
@@ -51,5 +66,4 @@ export default {
 </script>
 
 <style>
-
 </style>

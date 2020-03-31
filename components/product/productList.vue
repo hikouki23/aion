@@ -3,7 +3,7 @@
     <div v-if="$apollo.loading">
       <v-progress-circular class="ml-4" size="70" indeterminate color="blue" />
     </div>
-    <v-row dense>
+    <v-row no-gutters dense class="mb-4">
       <v-col
         v-for="product in allProducts"
         :key="product.id"
