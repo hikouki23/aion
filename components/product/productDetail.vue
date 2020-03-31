@@ -1,5 +1,8 @@
 <template>
   <v-card class="mx-auto" max-width="20rem">
+    <v-icon v-if="!showCartButton" class="clickable float-right" @click="removeProductFromCart">
+      mdi-close
+    </v-icon>
     <v-list-item three-line>
       <v-list-item-content>
         <div class="headline font-weight-thin mb-4">
@@ -72,12 +75,23 @@ export default {
   methods: {
     updateQuantity (val) {
       this.quantity = val
+      this.$emit('on-quantity-change', this.getProduct())
     },
     addProductToCart () {
-      this.$store.commit('product/addProductToCart', { id: this.id, quantityPicked: this.quantity, description: this.description, company: this.company, pricePerUnity: this.pricePerUnity, imgLink: this.imgLink })
+      this.$store.commit('product/addProductToCart', this.getProduct())
+    },
+    removeProductFromCart () {
+      this.$emit('on-remove-product', this.getProduct())
+    },
+    getProduct () {
+      return { id: this.id, quantityPicked: this.quantity, description: this.description, company: this.company, pricePerUnity: this.pricePerUnity, imgLink: this.imgLink }
     }
   }
 }
 </script>
 
-<style></style>
+<style>
+.clickable{
+  cursor:pointer
+}
+</style>
